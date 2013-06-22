@@ -16,7 +16,6 @@ import upeu.rrhh.model.Usuario;
  */
 public class UsuarioDAO extends DataBaseConexion{
 
-    
     public List<Usuario> ValidarUser(String user,String llave)
     {
         Usuario model= new Usuario();        
@@ -40,6 +39,4 @@ public class UsuarioDAO extends DataBaseConexion{
            }
         return lista;
         }
-    
-   
 }
