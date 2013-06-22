@@ -25,9 +25,10 @@ public class DataBaseConexion {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
 //                Db en el Servidor
-//               Conn = DriverManager.getConnection("jdbc:mysql://192.96.219.129:3306/wasistencia","rjota","123456");
+                    Conn=(Connection)DriverManager.getConnection("jdbc:mysql://ec2-50-19-213-178.compute-1.amazonaws.com/AsistenciaCloud", "Asistencia", "123456");
 //               Db local
-                    Conn=(Connection)DriverManager.getConnection("jdbc:mysql://localhost/asistencia", "root", "123456");
+//                    Conn=(Connection)DriverManager.getConnection("jdbc:mysql://localhost/asistencia", "root", "123456");
+                    
                     System.out.println("Conexion Iniciada");
             } catch (Exception e) {
                 System.out.println("DBConn.getConnection "+e.getMessage()+" Pruebe Otra Ves ");
