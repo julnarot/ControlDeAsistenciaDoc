@@ -1,0 +1,15 @@
+/* 
+    Document   : Cabecera
+    Created on : 26/02/2013, 11:17:20 AM
+    Author     : USUARIO
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+ #img{ 
+    max-width: 160%;
+    max-height: 220px;
+    
+    float: top;
+}
+

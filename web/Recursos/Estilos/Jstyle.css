@@ -1,0 +1,272 @@
+/* 
+    Document   : Jstyle
+    Created on : 05/02/2013, 08:20:05 AM
+    Author     : JONATAN
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#repGen  {
+	border-collapse: collapse;
+	border: 1px solid #CCC;
+       width: 80%;
+	font-size: 11px;
+	font-family:Verdana;
+	
+        box-shadow:black 1px 1px 5px;
+        border-collapse: collapse;
+        margin:10px 0pt 15px; 
+}
+ 
+#repGen  thead tr th, #repGen tfoot tr th {
+        text-align: center;
+	font-weight: bold;
+	background-color: #E1E1E1;
+	padding:5px;
+}
+#repGen  thead tr .header {
+	background-image: url(../Imagenes/Icons/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+} 
+
+
+#repGen  tbody td {
+	padding: 5px 10px;
+        text-align: left;
+/*        padding: 10px;*/
+}
+#repGen  tbody tr:hover td {
+	background-color: #F3F3F3;
+}
+
+
+#repGen  thead tr .headerSortUp {
+	background-image: url(../Imagenes/Icons/asc.gif);
+}
+#repGen  thead tr .headerSortDown {
+	background-image: url(../Imagenes/Icons/desc.gif);
+}
+#repGen  thead tr .headerSortDown, table#repGen thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+ #FormBusqueda:before, #FormBusqueda:after {
+    content:"";
+    display:table;
+  }
+  #FormBusqueda:after {clear:both; }
+/*  #FormBusqueda { zoom:4; }*/
+
+   /* el formulario en si mismo */
+  #FormBusqueda {
+    background-color: #E1E1E1;
+    border-radius: 10px;
+    box-shadow: 0 0 2px #606971 inset;
+    margin: 0 auto;
+    padding: 15px;
+    width: 390px;
+  }
+
+   /* la caja donde se ingresa el texto a buscar */
+  #FormBusqueda input {
+    background-color: #EEE;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    float: left;
+    font-family: Tahoma;font-size:15px;font-weight: bold;
+    height: 20px;
+    padding: 10px 5px;
+    width: 280px;
+  }
+  #FormBusqueda input:focus {
+    outline: 0;
+    background: #FFF;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+  }
+  
+
+  /* el estilo de del atributo placeholder debe ser declarado para cada navegador de modo separado */
+  #FormBusqueda input:-moz-placeholder { color: #999; font-weight: normal; font-style: italic; }
+  #FormBusqueda input::-webkit-input-placeholder { color: #999; font-weight: normal; font-style: italic; }
+  #FormBusqueda input:-ms-input-placeholder { color: #999; font-weight: normal; font-style: italic; }
+
+  /* aquí iría el estilo de del atributo required si es que se desea definirlo */
+  #FormBusqueda input:required { box-shadow: none; }
+
+   /* el botón de envio */
+  #FormBusqueda button {
+    background-color: #9099A1;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    color: #FFF;
+    cursor: pointer;
+    float: right;
+    font-family: Tahoma;
+    font-size: 15px;
+    font-weight: bold;
+    height: 40px;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+    width: 100px;
+  }
+  #FormBusqueda button:hover{ background: #E54040; } 
+  #FormBusqueda button:active, #FormBusqueda button:focus{ background: #C42F2F; }
+  #FormBusqueda button:before { /* el detalle del triángulo izquierdo */
+    content: "";
+    border-color: transparent #9099A1 transparent;
+    border-style: solid solid solid none;
+    border-width: 8px 8px 8px 0;
+    left: -6px;
+    position: absolute;
+    top: 12px;
+  }
+  #FormBusqueda button:hover:before { border-right-color: #E54040; }
+  #FormBusqueda button:focus:before { border-right-color: #C42F2F; }    
+
+
+#DivDemo {
+    -moz-box-shadow: 3px 3px 4px #111;
+    -webkit-box-shadow: 3px 3px 4px #111;
+    box-shadow: 3px 3px 4px #111;
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#111111')";
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#111111');
+}
+
+
+#FormReg{
+
+     background-color: #E1E1E1;
+    border-radius: 10px;
+    box-shadow: 0 0 2px #606971 inset;
+    margin: 0 auto;
+    padding: 15px;
+    width: 290px;
+    
+}
+#FormReg label{
+    display: block;
+    font-weight: bold;
+}
+/*#FormReg div{
+    margin-bottom: 15px;
+}*/
+
+#FormReg input[type="text"],input[type="date"],input[type="email"],input[type="password"], #FormReg textarea{
+     background-color: #EEE;
+    border: none;
+    border-radius: 3px 0 0 3px;
+/*    float: left;*/
+    font-family: Tahoma;font-size:15px;font-weight: bold;
+    height: 10px;
+    padding: 10px 5px;
+    width: 240px;
+}
+#FormReg input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus, #FormReg textarea{
+     outline: 0;
+    background: #FFF;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+
+}
+#FormReg input[type="text"]:focus, #FormReg textarea:focus{
+
+    outline: none;
+    box-shadow:0 0 0 3px #dde9ec;
+    
+}
+#FormReg input[type="submit"],input[type="reset"],input[type="url"],input[type="button"]{
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px white;
+ 
+    background: #e4f1f6;
+    background: -moz-linear-gradient(top, #e4f1f6 0%, #cfe6ef 100%);
+    background: -webkit-linear-gradient(top, #e4f1f6 0%,#cfe6ef 100%);
+}
+#FormReg input[type="submit"]:hover,input[type="reset"]:hover,input[type="url"]:hover,input[type="button"]:hover{
+    background: #9099A1;
+    background: -moz-linear-gradient(top, #9099A1 0%, #9099A1 100%);
+    background: -webkit-linear-gradient(top, #9099A1 0%,#9099A1 100%);
+}
+#FormReg input[type="submit"]:active,input[type="reset"]:active,input[type="url"]:active,input[type="button"]:active{
+    background: #cfe6ef;
+    background: -moz-linear-gradient(top, #cfe6ef 0%, #edfcff 100%);
+    background: -webkit-linear-gradient(top, #cfe6ef 0%,#edfcff 100%);
+
+    
+}
+
+/*#StySelec {
+
+}*/
+#FormReg select {
+    width: 228px;
+    height: 34px;
+    overflow: hidden;
+    background: url(../Imagenes/Forms/Select.png) no-repeat ;
+    border-radius: 10px;
+    /*background: transparent;*/
+    max-width:400px; 
+/*    width: 228px;*/
+    padding: 5px;
+    border: 1px solid #CCC;
+    font-size: 16px;
+    height: 34px;
+    font-weight: bold;
+    outline:0px;
+    -webkit-appearance: none;
+    border-radius: 3px 0 0 3px;
+}
+#FormReg option {
+    background: lightgrey;
+    width: 228px;
+    padding: 5px;
+    border: 1px solid #CCC;
+    font-size: 16px;
+    height: 34px;
+    outline:0px;
+    -webkit-appearance: none;
+}
+
+
+
+	
+	input[type="radio"], 
+	input[type="checkbox"] { position: absolute; left: -999em; }
+		
+	label:before { 
+		display: inline-block; position: relative; top:0.25em; left:-2px; 
+		content:''; width:25px; height:25px;
+		background-image:url(../Imagenes/Forms/formelements.png); }
+	
+	input[type="checkbox"] + label:before { background-position: 0 -25px;}
+	input[type="checkbox"]:checked + label:before {background-position: 0 0 ; }
+		 
+	input[type="radio"] + label:before { background-position: -25px -25px;}	 	
+	input[type="radio"]:checked + label:before { background-position: -25px 0;}
+	
+		/* Remove the custom styling for IE 7-8 */
+		
+		.ie8 label:before { display:none; content:none; }
+		
+		.ie8 input[type="checkbox"],
+		.ie8 input[type="radio"],
+		.ie7 input[type="checkbox"],
+		.ie7 input[type="radio"]{ 
+			position: static; left:0; }
+		
+		.ie8 input[type="checkbox"],
+		.ie8 input[type="radio"] { 
+			position:relative; top:5px; margin-right:0.5em;}	
+			
+	input[type="text"]:focus, textarea:focus {
+		border-color:#000;
+		}

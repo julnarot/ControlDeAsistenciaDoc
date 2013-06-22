@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="0.9.12">
+ <project-name>DBA-Asitencia v.0.7</project-name>
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Connection Type" value="MySQL" />
+   <property key="Logical" value="asistenciaMsql" />
+   <property key="JDBC URL" value="jdbc:mysql://localhost:3306/asistencia" />
+   <property key="UID" value="root" />
+   <property key="PWD" value="123456" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" name="Docente" objectType="TABLE" physicalName="docente" remarks="" >
+   <folder id="FOL2" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL3" populated="true" autoIncrement="false" autoIncrementSequenceName="Docente_docenteid_seq" name="docenteid" nullable="0" physicalName="docenteid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL4" populated="true" autoIncrement="false" autoIncrementSequenceName="Docente_nombres_seq" name="nombres" nullable="0" physicalName="nombres" precision="60" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL5" populated="true" autoIncrement="false" autoIncrementSequenceName="Docente_apellidos_seq" name="apellidos" nullable="0" physicalName="apellidos" precision="60" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL6" populated="true" autoIncrement="false" autoIncrementSequenceName="Docente_fechanac_seq" name="fechanac" nullable="1" physicalName="fechanac" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL7" populated="true" autoIncrement="false" autoIncrementSequenceName="Docente_numcelular_seq" name="numcelular" nullable="1" physicalName="numcelular" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL8" populated="true" autoIncrement="false" autoIncrementSequenceName="Docente_email_seq" name="email" nullable="0" physicalName="email" precision="100" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL9" populated="true" autoIncrement="false" autoIncrementSequenceName="Docente_sexo_seq" name="sexo" nullable="0" physicalName="sexo" precision="15" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL10" populated="true" autoIncrement="false" autoIncrementSequenceName="Docente_gradoac_seq" name="gradoac" nullable="0" physicalName="gradoac" precision="50" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL11" populated="true" autoIncrement="false" autoIncrementSequenceName="Docente_dni_seq" name="dni" nullable="0" physicalName="dni" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL12" populated="true" autoIncrement="false" autoIncrementSequenceName="Docente_estado_seq" name="estado" nullable="0" physicalName="estado" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL14" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL15" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX16" populated="true" clustered="false" name="Docente_pk" physicalName="DOCENTE_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC17" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL3" name="docenteid" physicalName="docenteid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB18" populated="true" name="salon" objectType="TABLE" physicalName="salon" remarks="" >
+   <folder id="FOL19" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL20" populated="true" autoIncrement="false" autoIncrementSequenceName="salon_salonid_seq" name="salonid" nullable="0" physicalName="salonid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL21" populated="true" autoIncrement="false" autoIncrementSequenceName="nomsalon_salon_seq" name="nomsalon" nullable="0" physicalName="nomsalon" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL22" populated="true" autoIncrement="false" autoIncrementSequenceName="pabellon_pabellonid_seq" name="pabellonid" nullable="0" physicalName="pabellonid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL23" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL24" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL25" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX26" populated="true" clustered="false" name="salon_pk" physicalName="SALON_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC27" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL20" name="salonid" physicalName="salonid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB28" populated="true" name="carrera" objectType="TABLE" physicalName="carrera" remarks="" >
+   <folder id="FOL29" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL30" populated="true" autoIncrement="false" autoIncrementSequenceName="carrera_carreraid_seq" name="carreraid" nullable="0" physicalName="carreraid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL31" populated="true" autoIncrement="false" autoIncrementSequenceName="carrera_nombre_seq" name="nombre" nullable="0" physicalName="nombre" precision="60" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL32" populated="true" autoIncrement="false" autoIncrementSequenceName="facultad_facultadid_seq" name="facultadid" nullable="0" physicalName="facultadid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL33" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL34" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL35" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX36" populated="true" clustered="false" name="carrera_pk" physicalName="CARRERA_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC37" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL30" name="carreraid" physicalName="carreraid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB38" populated="true" name="curso" objectType="TABLE" physicalName="curso" remarks="" >
+   <folder id="FOL39" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL40" populated="true" autoIncrement="false" autoIncrementSequenceName="cursoid_curso_seq" name="cursoid" nullable="0" physicalName="cursoid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL41" populated="true" autoIncrement="false" autoIncrementSequenceName="curso_codigo_seq" name="codigo" nullable="0" physicalName="codigo" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL42" populated="true" autoIncrement="false" autoIncrementSequenceName="curso_numcredito_seq" name="numcredito" nullable="0" physicalName="numcredito" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL43" populated="true" autoIncrement="false" autoIncrementSequenceName="curso_numhoras_seq" name="numhoras" nullable="0" physicalName="numhoras" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL44" populated="true" autoIncrement="false" autoIncrementSequenceName="curso_categoria_seq" name="categoria" nullable="1" physicalName="categoria" precision="30" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL45" populated="true" autoIncrement="false" autoIncrementSequenceName="curso_nombre_seq" name="nombre" nullable="0" physicalName="nombre" precision="60" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL46" populated="true" autoIncrement="false" autoIncrementSequenceName="carrera_carreraid_seq" name="carreraid" nullable="0" physicalName="carreraid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL47" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL48" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL49" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX50" populated="true" clustered="false" name="curso_pk" physicalName="CURSO_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC51" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL40" name="cursoid" physicalName="cursoid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB52" populated="true" name="cargadocente" objectType="TABLE" physicalName="cargadocente" remarks="" >
+   <folder id="FOL53" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL54" populated="true" autoIncrement="false" autoIncrementSequenceName="cargadocente_cargadocenteid_seq" name="cargadocenteid" nullable="0" physicalName="cargadocenteid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL55" populated="true" autoIncrement="false" autoIncrementSequenceName="curso_curso_seq" name="cursoid" nullable="0" physicalName="cursoid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL56" populated="true" autoIncrement="false" autoIncrementSequenceName="periodo_periodoid_seq" name="periodoid" nullable="0" physicalName="periodoid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL57" populated="true" autoIncrement="false" autoIncrementSequenceName="cargadocente_estado_seq" name="estado" nullable="0" physicalName="estado" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL58" populated="true" autoIncrement="false" autoIncrementSequenceName="cargadocente_fechaalta_seq" name="fechaalta" nullable="0" physicalName="fechaalta" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL59" populated="true" autoIncrement="false" autoIncrementSequenceName="ciclo_ciclo_seq" name="grupoid" nullable="0" physicalName="grupoid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL60" populated="true" autoIncrement="false" autoIncrementSequenceName="Docente_docenteid_seq" name="docenteid" nullable="0" physicalName="docenteid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL61" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL62" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL63" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX64" populated="true" clustered="false" name="cargadocente_pk" physicalName="CARGADOCENTE_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC65" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL54" name="cargadocenteid" physicalName="cargadocenteid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB66" populated="true" name="periodo" objectType="TABLE" physicalName="periodo" remarks="" >
+   <folder id="FOL67" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL68" populated="true" autoIncrement="false" autoIncrementSequenceName="periodo_periodoid_seq" name="periodoid" nullable="0" physicalName="periodoid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL69" populated="true" autoIncrement="false" autoIncrementSequenceName="periodo_nombre_seq" name="nombre" nullable="0" physicalName="nombre" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL70" populated="true" autoIncrement="false" autoIncrementSequenceName="periodo_fechafin_seq" name="fechafin" nullable="0" physicalName="fechafin" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL71" populated="true" autoIncrement="false" autoIncrementSequenceName="periodo_fechainicio_seq" name="fechainicio" nullable="0" physicalName="fechainicio" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL72" populated="true" autoIncrement="false" autoIncrementSequenceName="periodo_estado_seq" name="estado" nullable="0" physicalName="estado" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL73" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL74" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL75" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX76" populated="true" clustered="false" name="periodo_pk" physicalName="PERIODO_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC77" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL68" name="periodoid" physicalName="periodoid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB78" populated="true" name="facultad" objectType="TABLE" physicalName="facultad" remarks="" >
+   <folder id="FOL79" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL80" populated="true" autoIncrement="false" autoIncrementSequenceName="facultad_facultadid_seq" name="facultadid" nullable="0" physicalName="facultadid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL81" populated="true" autoIncrement="false" autoIncrementSequenceName="facultad_numtel_seq" name="numtel" nullable="0" physicalName="numtel" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL82" populated="true" autoIncrement="false" autoIncrementSequenceName="facultad_nombre_seq" name="nombre" nullable="0" physicalName="nombre" precision="100" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL83" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL84" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL85" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX86" populated="true" clustered="false" name="facultad_pk" physicalName="FACULTAD_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC87" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL80" name="facultadid" physicalName="facultadid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB88" populated="true" name="prioridad" objectType="TABLE" physicalName="prioridad" remarks="" >
+   <folder id="FOL89" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL90" populated="true" autoIncrement="false" autoIncrementSequenceName="prioridad_prioridadid_seq" name="prioridadid" nullable="0" physicalName="prioridadid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL91" populated="true" autoIncrement="false" autoIncrementSequenceName="nomprioridad_prioridad_seq" name="nomprioridad" nullable="0" physicalName="nomprioridad" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL92" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL93" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL94" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX95" populated="true" clustered="false" name="prioridad_pk" physicalName="PRIORIDAD_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC96" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL90" name="prioridadid" physicalName="observacionesid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB97" populated="true" name="controlasistencia" objectType="TABLE" physicalName="controlasistencia" remarks="" >
+   <folder id="FOL98" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL99" populated="true" autoIncrement="false" autoIncrementSequenceName="controlasistencia_controlasistenciaid_seq" name="controlasistenciaid" nullable="0" physicalName="controlasistenciaid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL100" populated="true" autoIncrement="false" autoIncrementSequenceName="controlasistencia_horaingreso_seq" name="horaingreso" nullable="0" physicalName="horaingreso" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL101" populated="true" autoIncrement="false" autoIncrementSequenceName="cargahorarioid_cargahorario_seq" name="cargahorarioid" nullable="0" physicalName="cargahorarioid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL102" populated="true" autoIncrement="false" autoIncrementSequenceName="encargado_encargadoid_seq" name="encargadoid" nullable="0" physicalName="encargadoid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL103" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL104" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL105" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX106" populated="true" clustered="false" name="controlasistencia_pk" physicalName="CONTROLASISTENCIA_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC107" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL99" name="controlasistenciaid" physicalName="controlasistenciaid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB108" populated="true" name="grupo" objectType="TABLE" physicalName="grupo" remarks="" >
+   <folder id="FOL109" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL110" populated="true" autoIncrement="false" autoIncrementSequenceName="grupo_grupo_seq" name="grupoid" nullable="0" physicalName="grupoid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL111" populated="true" autoIncrement="false" autoIncrementSequenceName="grupo_nombre_seq" name="nombre" nullable="0" physicalName="nombre" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL112" populated="true" autoIncrement="false" autoIncrementSequenceName="grupo_ciclo_seq" name="ciclo" nullable="0" physicalName="ciclo" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL113" populated="true" autoIncrement="false" autoIncrementSequenceName="carrera_carreraid_seq" name="carreraid" nullable="0" physicalName="carreraid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL114" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL115" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL116" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX117" populated="true" clustered="false" name="grupo_pk" physicalName="CICLO_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC118" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL110" name="grupoid" physicalName="cicloacadem" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB119" populated="true" name="cargasalon" objectType="TABLE" physicalName="cargasalon" remarks="" >
+   <folder id="FOL120" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL121" populated="true" autoIncrement="false" autoIncrementSequenceName="cargasalon_cargasalonid_seq" name="cargasalonid" nullable="0" physicalName="cargasalonid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL122" populated="true" autoIncrement="false" autoIncrementSequenceName="cargadocente_cargadocenteid_seq" name="cargadocenteid" nullable="0" physicalName="cargadocenteid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL123" populated="true" autoIncrement="false" autoIncrementSequenceName="salon_salonid_seq" name="salonid" nullable="0" physicalName="salonid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL124" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL125" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL126" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX127" populated="true" clustered="false" name="cargasalon_pk" physicalName="CARGASALON_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC128" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL121" name="cargasalonid" physicalName="cargasalonid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB129" populated="true" name="turno" objectType="TABLE" physicalName="turno" remarks="" >
+   <folder id="FOL130" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL131" populated="true" autoIncrement="false" autoIncrementSequenceName="turno_turnoid_seq" name="turnoid" nullable="0" physicalName="turnoid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL132" populated="true" autoIncrement="false" autoIncrementSequenceName="turno_nombre_seq" name="nombre" nullable="0" physicalName="nombre" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL133" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL134" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL135" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX136" populated="true" clustered="false" name="turno_pk" physicalName="TURNO_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC137" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL131" name="turnoid" physicalName="turnoid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB138" populated="true" name="horas" objectType="TABLE" physicalName="horas" remarks="" >
+   <folder id="FOL139" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL140" populated="true" autoIncrement="false" autoIncrementSequenceName="horas_horasid_seq" name="horasid" nullable="0" physicalName="horasid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL141" populated="true" autoIncrement="false" autoIncrementSequenceName="horas_horainicio_seq" name="horainicio" nullable="0" physicalName="horainicio" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL142" populated="true" autoIncrement="false" autoIncrementSequenceName="horas_nomhora_seq" name="nomhora" nullable="0" physicalName="nomhora" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL143" populated="true" autoIncrement="false" autoIncrementSequenceName="turno_turnoid_seq" name="turnoid" nullable="0" physicalName="turnoid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL144" populated="true" autoIncrement="false" autoIncrementSequenceName="horas_horafinal_seq" name="horafinal" nullable="0" physicalName="horafinal" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL145" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL146" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL147" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX148" populated="true" clustered="false" name="horas_pk" physicalName="HORAS_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC149" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL140" name="horasid" physicalName="horasid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB150" populated="true" name="fecha" objectType="TABLE" physicalName="fecha" remarks="" >
+   <folder id="FOL151" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL152" populated="true" autoIncrement="false" autoIncrementSequenceName="fecha_fechaid_seq" name="fechaid" nullable="0" physicalName="fechaid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL153" populated="true" autoIncrement="false" autoIncrementSequenceName="fecha_dia_seq" name="dia" nullable="0" physicalName="dia" precision="15" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL154" populated="true" autoIncrement="false" autoIncrementSequenceName="fecha_fecha_seq" name="fecha" nullable="0" physicalName="fecha" precision="15" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL155" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL156" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL157" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX158" populated="true" clustered="false" name="fecha_pk" physicalName="FECHA_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC159" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL152" name="fechaid" physicalName="fechaid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB160" populated="true" name="cargahorario" objectType="TABLE" physicalName="cargahorario" remarks="" >
+   <folder id="FOL161" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL162" populated="true" autoIncrement="false" autoIncrementSequenceName="cargahorarioid_cargahorario_seq" name="cargahorarioid" nullable="0" physicalName="cargahorarioid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL163" populated="true" autoIncrement="false" autoIncrementSequenceName="cargasalon_cargasalonid_seq" name="cargasalonid" nullable="0" physicalName="cargasalonid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL164" populated="true" autoIncrement="false" autoIncrementSequenceName="fecha_fechaid_seq" name="fechaid" nullable="0" physicalName="fechaid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL165" populated="true" autoIncrement="false" autoIncrementSequenceName="horas_horasid_seq" name="horasid" nullable="0" physicalName="horasid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL166" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL167" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL168" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX169" populated="true" clustered="false" name="cargahorario_pk" physicalName="CARGAHORARIO_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC170" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL162" name="cargahorarioid" physicalName="cargahorarioid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB171" populated="true" name="observacion" objectType="TABLE" physicalName="observacion" remarks="" >
+   <folder id="FOL172" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL173" populated="true" autoIncrement="false" autoIncrementSequenceName="observacion_observacionid_seq" name="observacionid" nullable="0" physicalName="observacionid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL174" populated="true" autoIncrement="false" autoIncrementSequenceName="prioridad_descripcion_seq" name="descripcion" nullable="0" physicalName="descripcion" precision="200" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL175" populated="true" autoIncrement="false" autoIncrementSequenceName="prioridad_prioridadid_seq" name="prioridadid" nullable="0" physicalName="prioridadid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL176" populated="true" autoIncrement="false" autoIncrementSequenceName="controlasistencia_controlasistenciaid_seq" name="controlasistenciaid" nullable="0" physicalName="controlasistenciaid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL177" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL178" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL179" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX180" populated="true" clustered="false" name="observacion_pk" physicalName="OBSERVACION_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC181" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL173" name="observacionid" physicalName="observacionid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB182" populated="true" name="encargado" objectType="TABLE" physicalName="encargado" remarks="" >
+   <folder id="FOL183" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL184" populated="true" autoIncrement="false" autoIncrementSequenceName="encargado_encargadoid_seq" name="encargadoid" nullable="0" physicalName="encargadoid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL185" populated="true" autoIncrement="false" autoIncrementSequenceName="encargado_numtel_seq" name="numtel" nullable="0" physicalName="numtel" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL186" populated="true" autoIncrement="false" autoIncrementSequenceName="encargado_email_seq" name="email" nullable="0" physicalName="emal" precision="100" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL187" populated="true" autoIncrement="false" autoIncrementSequenceName="encargado_apellidos_seq" name="apellidos" nullable="0" physicalName="apellidos" precision="60" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL188" populated="true" autoIncrement="false" autoIncrementSequenceName="encargado_nombre_seq" name="nombre" nullable="0" physicalName="nombre" precision="60" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL189" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL190" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL191" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX192" populated="true" clustered="false" name="encargado_pk" physicalName="ENCARGADO_PK" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC193" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL184" name="encargadoid" physicalName="encargadoid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB194" populated="true" name="pabellon" objectType="TABLE" physicalName="pabellon" remarks="" >
+   <folder id="FOL195" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL196" populated="true" autoIncrement="false" autoIncrementSequenceName="pabellon_pabellonid_seq" name="pabellonid" nullable="0" physicalName="pabellonid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL197" populated="true" autoIncrement="false" autoIncrementSequenceName="pabellon_nompabellon_seq" name="nompabellon" nullable="0" physicalName="nompabellon" precision="30" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL198" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL199" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL200" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX201" populated="true" clustered="false" name="pabellon_pk" physicalName="pabellon_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC202" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL196" name="pabellonid" physicalName="pabellonid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB203" populated="true" name="usuario" objectType="TABLE" physicalName="usuario" remarks="" >
+   <folder id="FOL204" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL205" populated="true" autoIncrement="false" autoIncrementSequenceName="usuario_usuarioid_seq" name="usuarioid" nullable="0" physicalName="usuarioid" precision="20" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL206" populated="true" autoIncrement="false" autoIncrementSequenceName="usuario_foto_seq" name="foto" nullable="0" physicalName="foto" precision="200" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL207" populated="true" autoIncrement="false" autoIncrementSequenceName="usuario_clave_seq" name="clave" nullable="0" physicalName="clave" precision="100" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL208" populated="true" autoIncrement="false" autoIncrementSequenceName="usuario_pagina_seq" name="pagina" nullable="0" physicalName="pagina" precision="100" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL209" populated="true" autoIncrement="false" autoIncrementSequenceName="usuario_alias_seq" name="alias" nullable="0" physicalName="alias" precision="100" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL210" populated="true" autoIncrement="false" autoIncrementSequenceName="encargado_encargadoid_seq" name="encargadoid" nullable="0" physicalName="encargadoid" precision="20" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL211" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL212" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL213" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX214" populated="true" clustered="false" name="usuario_pk" physicalName="usuario_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC215" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL205" name="usuarioid" physicalName="usuarioid" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL216" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB52" fkCardinality="7" identifying="false" name="Docente_cargadocente_fk" physicalName="docente_cargadocente_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP217" populated="true" fk-column-ref="COL60" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL3" />
+   </relationship>
+   <relationship id="REL218" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB119" fkCardinality="7" identifying="false" name="salon_cargasalon_fk" physicalName="salon_cargasalon_fk" pk-table-ref="TAB18" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP219" populated="true" fk-column-ref="COL123" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL20" />
+   </relationship>
+   <relationship id="REL220" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB18" fkCardinality="7" identifying="false" name="pabellon_salon_fk" physicalName="pabellon_salon_fk" pk-table-ref="TAB194" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP221" populated="true" fk-column-ref="COL22" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL196" />
+   </relationship>
+   <relationship id="REL222" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB108" fkCardinality="7" identifying="false" name="carrera_ciclo_fk" physicalName="carrera_ciclo_fk" pk-table-ref="TAB28" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP223" populated="true" fk-column-ref="COL113" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL30" />
+   </relationship>
+   <relationship id="REL224" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB38" fkCardinality="7" identifying="false" name="carrera_curso_fk" physicalName="carrera_curso_fk" pk-table-ref="TAB28" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP225" populated="true" fk-column-ref="COL46" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL30" />
+   </relationship>
+   <relationship id="REL226" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB28" fkCardinality="7" identifying="false" name="facultad_carrera_fk" physicalName="facultad_carrera_fk" pk-table-ref="TAB78" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP227" populated="true" fk-column-ref="COL32" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL80" />
+   </relationship>
+   <relationship id="REL228" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB52" fkCardinality="7" identifying="false" name="curso_cargadocente_fk" physicalName="curso_cargadocente_fk" pk-table-ref="TAB38" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP229" populated="true" fk-column-ref="COL55" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL40" />
+   </relationship>
+   <reference ref-id="REL224" />
+   <relationship id="REL230" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB119" fkCardinality="7" identifying="false" name="cargadocente_cargasalon_fk" physicalName="cargadocente_cargasalon_fk" pk-table-ref="TAB52" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP231" populated="true" fk-column-ref="COL122" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL54" />
+   </relationship>
+   <reference ref-id="REL216" />
+   <reference ref-id="REL228" />
+   <relationship id="REL232" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB52" fkCardinality="7" identifying="false" name="periodo_cargadocente_fk" physicalName="periodo_cargadocente_fk" pk-table-ref="TAB66" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP233" populated="true" fk-column-ref="COL56" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL68" />
+   </relationship>
+   <relationship id="REL234" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB52" fkCardinality="7" identifying="false" name="ciclo_cargadocente_fk" physicalName="ciclo_cargadocente_fk" pk-table-ref="TAB108" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP235" populated="true" fk-column-ref="COL59" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL110" />
+   </relationship>
+   <reference ref-id="REL232" />
+   <reference ref-id="REL226" />
+   <relationship id="REL236" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB171" fkCardinality="7" identifying="false" name="prioridad_observacion_fk" physicalName="prioridad_observacion_fk" pk-table-ref="TAB88" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP237" populated="true" fk-column-ref="COL175" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL90" />
+   </relationship>
+   <relationship id="REL238" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB171" fkCardinality="7" identifying="false" name="controlasistencia_observacion_fk" physicalName="controlasistencia_observacion_fk" pk-table-ref="TAB97" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP239" populated="true" fk-column-ref="COL176" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL99" />
+   </relationship>
+   <relationship id="REL240" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB97" fkCardinality="7" identifying="false" name="cargahorario_controlasistencia_fk" physicalName="cargahorario_controlasistencia_fk" pk-table-ref="TAB160" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP241" populated="true" fk-column-ref="COL101" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL162" />
+   </relationship>
+   <relationship id="REL242" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB97" fkCardinality="7" identifying="false" name="encargado_controlasistencia_fk" physicalName="encargado_controlasistencia_fk" pk-table-ref="TAB182" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP243" populated="true" fk-column-ref="COL102" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL184" />
+   </relationship>
+   <reference ref-id="REL234" />
+   <reference ref-id="REL222" />
+   <relationship id="REL244" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB160" fkCardinality="7" identifying="false" name="cargasalon_cargahorario_fk" physicalName="cargasalon_cargahorario_fk" pk-table-ref="TAB119" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP245" populated="true" fk-column-ref="COL163" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL121" />
+   </relationship>
+   <reference ref-id="REL218" />
+   <reference ref-id="REL230" />
+   <relationship id="REL246" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB138" fkCardinality="7" identifying="false" name="turno_horas_fk" physicalName="turno_horas_fk" pk-table-ref="TAB129" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP247" populated="true" fk-column-ref="COL143" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL131" />
+   </relationship>
+   <relationship id="REL248" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB160" fkCardinality="7" identifying="false" name="horas_cargahorario_fk" physicalName="horas_cargahorario_fk" pk-table-ref="TAB138" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP249" populated="true" fk-column-ref="COL165" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL140" />
+   </relationship>
+   <reference ref-id="REL246" />
+   <relationship id="REL250" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB160" fkCardinality="7" identifying="false" name="fecha_cargahorario_fk" physicalName="fecha_cargahorario_fk" pk-table-ref="TAB150" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP251" populated="true" fk-column-ref="COL164" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL152" />
+   </relationship>
+   <reference ref-id="REL240" />
+   <reference ref-id="REL244" />
+   <reference ref-id="REL248" />
+   <reference ref-id="REL250" />
+   <reference ref-id="REL236" />
+   <reference ref-id="REL238" />
+   <reference ref-id="REL242" />
+   <relationship id="REL252" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB203" fkCardinality="7" identifying="false" name="encargado_usuario_fk" physicalName="encargado_usuario_fk" pk-table-ref="TAB182" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP253" populated="true" fk-column-ref="COL210" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL184" />
+   </relationship>
+   <reference ref-id="REL220" />
+   <reference ref-id="REL252" />
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="false" target-catalog="asistencia" target-schema=""> </ddl-generator>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.0" viewportX="0" viewportY="77" relationship-style="rectilinear" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" showPrimary="true" showForeign="true" showIndexed="true" showUnique="true" showTheRest="true">
+  <table-pane table-ref="TAB97" x="436" y="437" bgColor="0xc8b7ea" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB1" x="75" y="49" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB18" x="806" y="103" bgColor="0xc8dccc" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB28" x="25" y="455" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB38" x="242" y="423" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB52" x="303" y="234" bgColor="0xb9bbf6" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB66" x="321" y="81" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB78" x="57" y="578" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB88" x="883" y="509" bgColor="0xe8cfdb" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB108" x="29" y="296" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB119" x="592" y="186" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB129" x="919" y="417" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB138" x="694" y="435" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB150" x="923" y="274" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB160" x="597" y="305" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB171" x="526" y="554" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB182" x="299" y="594" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB194" x="523" y="96" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB203" x="841" y="581" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL226" pk-x="90" pk-y="0" fk-x="86" fk-y="79" orientation="72"/>
+  <table-link relationship-ref="REL228" pk-x="76" pk-y="0" fk-x="62" fk-y="143" orientation="72"/>
+  <table-link relationship-ref="REL230" pk-x="208" pk-y="71" fk-x="0" fk-y="62" orientation="33"/>
+  <table-link relationship-ref="REL218" pk-x="120" pk-y="79" fk-x="207" fk-y="47" orientation="20"/>
+  <table-link relationship-ref="REL232" pk-x="35" pk-y="111" fk-x="155" fk-y="0" orientation="132"/>
+  <table-link relationship-ref="REL246" pk-x="0" pk-y="10" fk-x="165" fk-y="53" orientation="18"/>
+  <table-link relationship-ref="REL244" pk-x="127" pk-y="79" fk-x="77" fk-y="0" orientation="132"/>
+  <table-link relationship-ref="REL250" pk-x="0" pk-y="14" fk-x="203" fk-y="78" orientation="18"/>
+  <table-link relationship-ref="REL248" pk-x="70" pk-y="0" fk-x="158" fk-y="95" orientation="72"/>
+  <table-link relationship-ref="REL240" pk-x="59" pk-y="95" fk-x="155" fk-y="0" orientation="132"/>
+  <table-link relationship-ref="REL236" pk-x="0" pk-y="53" fk-x="226" fk-y="52" orientation="18"/>
+  <table-link relationship-ref="REL238" pk-x="180" pk-y="95" fk-x="46" fk-y="0" orientation="132"/>
+  <table-link relationship-ref="REL242" pk-x="120" pk-y="0" fk-x="63" fk-y="95" orientation="72"/>
+  <table-link relationship-ref="REL222" pk-x="113" pk-y="0" fk-x="129" fk-y="95" orientation="72"/>
+  <table-link relationship-ref="REL234" pk-x="171" pk-y="25" fk-x="0" fk-y="89" orientation="33"/>
+  <table-link relationship-ref="REL216" pk-x="177" pk-y="121" fk-x="0" fk-y="41" orientation="33"/>
+  <table-link relationship-ref="REL220" pk-x="181" pk-y="31" fk-x="0" fk-y="31" orientation="33"/>
+  <table-link relationship-ref="REL224" pk-x="175" pk-y="21" fk-x="0" fk-y="81" orientation="33"/>
+  <table-link relationship-ref="REL252" pk-x="192" pk-y="56" fk-x="0" fk-y="111" orientation="33"/>
+ </play-pen>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>
